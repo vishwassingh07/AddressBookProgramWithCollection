@@ -87,7 +87,17 @@ namespace AddressBookProgramWithCollection
 
                 Console.WriteLine("Last Name:" + Contacts["last Name"]);
 
+                Console.WriteLine("Address:" + Contacts["Address"]);
 
+                Console.WriteLine("City:" + Contacts["City"]);
+
+                Console.WriteLine("State:" + Contacts["State"]);
+
+                Console.WriteLine("Zip:" + Contacts["Zip"]);
+
+                Console.WriteLine("Phone number:" + Contacts["Phone number"]);
+
+                Console.WriteLine("Email:" + Contacts["Email"]);
             }
             else
                 Console.WriteLine("Contact doesn't exist");
