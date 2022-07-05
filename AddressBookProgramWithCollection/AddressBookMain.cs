@@ -143,6 +143,20 @@ namespace AddressBookProgramWithCollection
                 Console.WriteLine("contact doesn't exist");
             }
         }
+        //UC4 - Delete Contact
+        public void DeleteContact()
+        {
+            //Delete contact
+            Console.WriteLine("Enter contact name:");
+            String ContactName = Console.ReadLine();
+            if (AddressBook.ContainsKey(ContactName))
+            {
+                AddressBook.Remove(ContactName);
+                Console.WriteLine("contact removed");
+            }
+            else
+                Console.WriteLine("contact doesn't exist");
+        }
         //Display Contact
         public void Display()
         {
