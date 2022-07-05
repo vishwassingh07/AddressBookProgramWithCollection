@@ -39,5 +39,13 @@ namespace AddressBookProgramWithCollection
             Contacts.Add("Email Address ", Console.ReadLine());
 
         }
+        //Display Contact
+        public void Display()
+        {
+            foreach (var contact in Contacts)
+            {
+                Console.WriteLine(contact);
+            }
+        }
     }
 }
