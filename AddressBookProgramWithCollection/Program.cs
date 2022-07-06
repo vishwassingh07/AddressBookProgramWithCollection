@@ -11,7 +11,7 @@ namespace AddressBookProgramWithCollection
             while (end)
             {
                 Console.WriteLine("Choose an option to execute :\n1. Create Contact\n2. Add Contact\n3. Edit Contact\n4." +
-                    " Delete Contact\n5. View Contact\n6. End The Program");
+                    " Delete Contact\n5. View Contact\n6. Restricting Duplicate Contact\n7. End The Program");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -26,7 +26,6 @@ namespace AddressBookProgramWithCollection
                         break;
                     case 3:
                         addingContact.EditContact();
-                        addingContact.ViewContact();
                         break;
                     case 4:
                         addingContact.DeleteContact();
@@ -35,6 +34,21 @@ namespace AddressBookProgramWithCollection
                         addingContact.ViewContact();
                         break;
                     case 6:
+                        MultipleAddressBook studentAddressBook = new MultipleAddressBook();
+                        studentAddressBook.AddDetails("Engineer", "Vishwas", "Singh", "Whitefield", "Bengaluru", "karnataka", 560066, 9424777313, "baghel.vishwas0@gmail.com");
+                        studentAddressBook.AddDetails("Engineer", "Abhishek", "Jadhav", "Bandra", "Mumbai", "Maharashtra", 560464, 1236547899, "baghel.vishwas80@gmail.com");
+                        studentAddressBook.AddDetails("Engineer", "Shivraj", "Gawda", "Malleshwaram", "Bengaluru", "karnataka", 560066, 9424464313, "vasdf.vishwas0@gmail.com");
+                        studentAddressBook.AddDetails("Engineer", "Rajesh", "Singh", "GTNagar", "pune", "Maharashtra", 564566, 9433777313, "baghel.vish0@gmail.com");
+                        studentAddressBook.AddDetails("Engineer", "Vivek", "Singh", "HSR", "Bengaluru", "karnataka", 560996, 9424777315, "baghel.vias0@gmail.com");
+                        studentAddressBook.AddDetails("Engineer", "Siddhant", "Singh", "City Centre", "Noida", "U.P.", 458963, 9425477313, "baghel.was0@gmail.com");
+                        Console.WriteLine("Enter Engineer Address Book Name : ");
+                        string addressBook = Console.ReadLine();
+                        studentAddressBook.AddressBook(addressBook);
+                        studentAddressBook.ComputeDetails();
+                        studentAddressBook.Search();
+                        studentAddressBook.Count();
+                        break;
+                    case 7:
                         end = false;
                         break;
                     default:
